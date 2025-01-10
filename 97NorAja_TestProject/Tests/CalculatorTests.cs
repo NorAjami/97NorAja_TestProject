@@ -88,8 +88,48 @@ namespace _97NorAja_TestProject
             Assert.Throws<DivideByZeroException>(() => calculator.Divide(a, b)); // 10 / 0 = DivideByZeroException
         }
 
+        [Fact]
+        public void Divide_ShouldReturnZero_WhenNumeratorIsZero()
+        {
+            // ARRANGE
+            var calculator = new Calculator();
+            float a = 0.0f;
+            float b = 5.0f;
 
+            // ACT
+            float result = calculator.Divide(a, b);
 
+            // ASSERT
+            Assert.Equal(0.0f, result);
+        }
+
+        [Fact]
+        public void Divide_ShouldHandleSmallFloats()
+        {
+            // ARRANGE
+            var calculator = new Calculator();
+            float a = 0.0001f;
+            float b = 0.0002f;
+
+            // ACT
+            float result = calculator.Divide(a, b);
+
+            // ASSERT
+            Assert.Equal(0.5f, result);
+        }
+
+        [Fact]
+        public void Divide_ShouldHandleLargeFloats()
+        {
+            // ARRANGE
+            var calculator = new Calculator();
+            float a = 1000000000.0f;
+            float b = 1000000000.0f;
+            // ACT
+            float result = calculator.Divide(a, b);
+            // ASSERT
+            Assert.Equal(1.0f, result);
+        }
 
 
 
