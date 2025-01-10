@@ -94,5 +94,22 @@ namespace _97NorAja_TestProject.Tests
             Assert.False(result);
         }
 
+        [Fact]
+        public void AreEqual_ShouldReturnTrue_ForStringsWithDifferentCases() // när två strängar är lika men olika i storlek på bokstäver (lowercase/uppercase) ska fortfarande bli true
+        {
+            var processor = new StringProcessor();
+            var result = processor.AreEqual("Hello", "hello");
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void AreEqual_ShouldReturnFalse_ForStringsWithSameCharactersInDifferentOrder() // när två strängar har samma bokstäver men olika ordning ska bli false
+        {
+            var processor = new StringProcessor();
+            var result = processor.AreEqual("abc", "cba");
+            Assert.False(result);
+        }
+
+
     }
 }
