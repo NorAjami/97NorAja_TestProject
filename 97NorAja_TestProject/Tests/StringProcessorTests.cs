@@ -23,7 +23,45 @@ namespace _97NorAja_TestProject.Tests
             Assert.Equal(expected, result); // jämför förväntat resultat med faktiskt resultat
         }
 
-        [Fact]
+        // TODO: NULL INPUT TEST
 
+        [Fact]
+        public void ToLowerCase_ShouldReturnNull_WhenInputIsNull()
+        {
+            // ARRANGE
+            var processor = new StringProcessor();
+
+            // ACT
+            string result = processor.ToLowerCase(null);
+
+            // ASSERT
+            Assert.Null(result);
+        }
+
+
+        [Fact]
+        public void Sanitize_ShouldRemoveSpecialCharacters()
+        {
+            // ARRANGE
+            var processor = new StringProcessor();
+            string input = "Ja@g ee hu#ngri%g 123 MA@T!";
+            // ACT
+            string result = processor.Sanitize(input);
+            // ASSERT
+            Assert.Equal("Jag ee hungrig 123 MAT", result);
+        }
+
+        [Fact]
+        public void Sanitize_ShouldReturnNull_WhenInputIsNull()
+        {
+            // ARRANGE
+            var processor = new StringProcessor();
+
+            // ACT
+            var result = processor.Sanitize(null);
+
+            // ASSERT
+            Assert.Null(result);
+        }
     }
 }
