@@ -23,10 +23,22 @@ namespace _97NorAja_TestProject
             return a * b;
         }
 
+        // kommenterade bort denna då jag ej kunde köra den andra med float exception
+        /* public float Divide(float a, float b)
+         {
+             return a / b;
+         }
+        */
+
         public float Divide(float a, float b)
         {
+            if (b == 0.0f) 
+                throw new DivideByZeroException("Division med 0 är inte tillåten."); //throw new DivideByZeroException("Division by zero is not allowed.");
+
             return a / b;
         }
+
+
 
 
 
