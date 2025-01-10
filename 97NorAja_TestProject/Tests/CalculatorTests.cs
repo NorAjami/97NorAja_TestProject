@@ -48,7 +48,18 @@ namespace _97NorAja_TestProject
             Assert.Equal(-57.75f, result);
         }
 
-
+         [Fact]
+        public void Divide_ShouldReturnCorrectQuotient_WhenDividingNegativeAndPositiveFloats()
+        {
+            // ARRANGE
+            var calculator = new Calculator();
+            float a = -10.5f;
+            float b = 2.5f;
+            // ACT
+            float result = calculator.Divide(a, b); // -10.5 / 2.5 = -4.2
+            // ASSERT
+            Assert.Equal(-4.2, result);
+        }
 
 
 
