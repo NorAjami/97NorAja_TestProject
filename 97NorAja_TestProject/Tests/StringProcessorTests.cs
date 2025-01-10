@@ -63,5 +63,36 @@ namespace _97NorAja_TestProject.Tests
             // ASSERT
             Assert.Null(result);
         }
+
+        [Fact]
+        public void AreEqual_ShouldReturnTrue_ForEqualStrings()
+        {
+            // ARRANGE
+            var processor = new StringProcessor();
+            var input1 = "Hello@123";
+            var input2 = "hello123";
+
+            // ACT
+            var result = processor.AreEqual(input1, input2);
+
+            // ASSERT
+            Assert.True(result);
+        }
+
+        [Fact]
+        public void AreEqual_ShouldReturnFalse_ForDifferentStrings() // denna testar om två strängar är olika
+        {
+            // ARRANGE
+            var processor = new StringProcessor();
+            var input1 = "Hello123";
+            var input2 = "World123";
+
+            // ACT
+            var result = processor.AreEqual(input1, input2);
+
+            // ASSERT
+            Assert.False(result);
+        }
+
     }
 }
