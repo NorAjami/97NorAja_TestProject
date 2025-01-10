@@ -8,6 +8,46 @@ namespace _97NorAja_TestProject
     public class UnitTest1
     {
         [Fact]
+        public void Add_ShouldReturnCorrectSum_WhenAddingNegativeAndPositiveFloats()
+        {
+            // ARRANGE
+            var calculator = new Calculator();
+            float a = -5.5f;
+            float b = 10.5f;
+
+            // ACT
+            float result = calculator.Add(a, b);
+
+            // ASSERT
+            Assert.Equal(5.0f, result);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //råkade köra int istället för float men körde nya tester efteråt.
+        /* [Fact]
         public void Add_ShouldReturnSumOfTwoNumbers()
         {
             // Arrange
@@ -61,5 +101,6 @@ namespace _97NorAja_TestProject
             // ASSERT
             Assert.Equal(5, result);
         }
+        */
     }
 }

@@ -8,6 +8,18 @@ namespace _97NorAja_TestProject
 {
     internal class Calculator
     {
+        public float Add(float a, float b)
+        {
+            return a + b;
+        }
+
+
+
+
+
+
+        //råkade missa float i början, körde int. men extra gör inget.
+        /*
         public int Add(int a, int b)
         {
             return a + b;
@@ -27,5 +39,6 @@ namespace _97NorAja_TestProject
         {
             return a / b;
         }
+        */
     }
 }
