@@ -110,6 +110,22 @@ namespace _97NorAja_TestProject.Tests
             Assert.False(result);
         }
 
+        [Fact]
+        public void ToLowerCase_ShouldReturnEmptyString_WhenInputIsEmpty() // om input är en tom sträng ska returnera en tom sträng
+        {
+            var processor = new StringProcessor();
+            var result = processor.ToLowerCase("");
+            Assert.Equal("", result);
+        }
+
+        [Fact]
+        public void Sanitize_ShouldReturnEmptyString_WhenInputContainsOnlySpecialCharacters() // om input endast innehåller specialtecken ska returnera en tom sträng för sanitize metoden
+        {
+            var processor = new StringProcessor();
+            var result = processor.Sanitize("!!!@@@###");
+            Assert.Equal("", result);
+        }
+
 
     }
 }
