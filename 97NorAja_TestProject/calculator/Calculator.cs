@@ -23,6 +23,11 @@ namespace _97NorAja_TestProject
             return a * b;
         }
 
+        public float Divide(float a, float b)
+        {
+            return a / b;
+        }
+
 
 
 

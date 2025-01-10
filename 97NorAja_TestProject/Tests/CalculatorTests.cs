@@ -53,12 +53,37 @@ namespace _97NorAja_TestProject
         {
             // ARRANGE
             var calculator = new Calculator();
-            float a = -10.5f;
+            float a = 50f;
             float b = 2.5f;
             // ACT
-            float result = calculator.Divide(a, b); // -10.5 / 2.5 = -4.2
+            float result = calculator.Divide(a, b); // 50 / 2.5 = 20
             // ASSERT
-            Assert.Equal(-4.2, result);
+            Assert.Equal(20, result);
+        }
+
+        [Fact]
+        public void Add_ShouldReturnCorrectSum_WhenAddingTwoNegativeFloats()
+        {
+            // ARRANGE
+            var calculator = new Calculator();
+            float a = -5.5f;
+            float b = -10.5f;
+            // ACT
+            float result = calculator.Add(a, b); // -5.5 + -10.5 = -16.0
+            // ASSERT
+            Assert.Equal(-16.0f, result);
+        }
+
+        [Fact]
+        public void Divide_ByZero_ShouldThrowDivideByZeroException()
+        {
+            // ARRANGE
+            var calculator = new Calculator();
+            float a = 10.0f;
+            float b = 0.0f;
+
+            // ACT & ASSERT
+            Assert.Throws<DivideByZeroException>(() => calculator.Divide(a, b)); // 10 / 0 = DivideByZeroException
         }
 
 
