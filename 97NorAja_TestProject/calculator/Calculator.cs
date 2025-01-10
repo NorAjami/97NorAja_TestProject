@@ -17,5 +17,10 @@ namespace _97NorAja_TestProject
         {
             return a - b;
         }
+
+        public int Multiply(int a, int b)
+        {
+            return a * b;
+        }
     }
 }

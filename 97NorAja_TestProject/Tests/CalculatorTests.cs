@@ -33,5 +33,18 @@ namespace _97NorAja_TestProject
             // Assert
             Assert.Equal(10, result); // Expected result is 10  
         }
+
+        [Fact]
+        public void Multiply_ShouldReturnProductOfTwoNumbers()
+        {
+            // Arrange
+            var calculator = new Calculator();
+            int a = 5;
+            int b = 5;
+            // Act
+            int result = calculator.Multiply(a, b); 
+            // Assert
+            Assert.Equal(25, result);   
+        }
     }
 }
