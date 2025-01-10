@@ -22,6 +22,34 @@ namespace _97NorAja_TestProject
             Assert.Equal(5.0f, result);
         }
 
+        [Fact]
+        public void Subtract_ShouldReturnCorrectDifference_WhenSubtractingNegativeAndPositiveFloats()
+        {
+            // ARRANGE
+            var calculator = new Calculator();
+            float a = -5.5f;
+            float b = 10.5f;
+            // ACT
+            float result = calculator.Subtract(a, b); // -5.5 - 10.5 = -16.0
+            // ASSERT
+            Assert.Equal(-16.0f, result);
+        }
+
+        [Fact]
+        public void Multiply_ShouldReturnCorrectProduct_WhenMultiplyingNegativeAndPositiveFloats()
+        {
+            // ARRANGE
+            var calculator = new Calculator();
+            float a = -5.5f;
+            float b = 10.5f;
+            // ACT
+            float result = calculator.Multiply(a, b); // -5.5 * 10.5 = -57.75
+            // ASSERT
+            Assert.Equal(-57.75f, result);
+        }
+
+
+
 
 
 

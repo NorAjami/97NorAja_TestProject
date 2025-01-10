@@ -13,6 +13,11 @@ namespace _97NorAja_TestProject
             return a + b;
         }
 
+        public float Subtract(float a, float b)
+        {
+            return a - b;
+        }
+
 
 
 
