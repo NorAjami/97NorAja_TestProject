@@ -22,5 +22,10 @@ namespace _97NorAja_TestProject
         {
             return a * b;
         }
+
+        public int Divide(int a, int b)
+        {
+            return a / b;
+        }
     }
 }

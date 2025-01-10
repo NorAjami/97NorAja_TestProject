@@ -46,5 +46,20 @@ namespace _97NorAja_TestProject
             // Assert
             Assert.Equal(25, result);   
         }
+
+        [Fact]
+        public void Divide_ShouldReturnQuotientOfTwoNumbers()
+        {
+            // ARRANGE
+            var calculator = new Calculator();
+            int a = 20;
+            int b = 4;
+
+            // ACT
+            int result = calculator.Divide(a, b);
+
+            // ASSERT
+            Assert.Equal(5, result);
+        }
     }
 }
