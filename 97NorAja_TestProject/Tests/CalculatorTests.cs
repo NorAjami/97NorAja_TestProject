@@ -131,6 +131,38 @@ namespace _97NorAja_TestProject
             Assert.Equal(1.0f, result);
         }
 
+        [Fact]
+        public void Add_ShouldHandleExtremeValues() // MaxValue + MaxValue = Infinity
+        {
+            // ARRANGE
+            var calculator = new Calculator();
+            float a = float.MaxValue;
+            float b = float.MaxValue;
+
+            // ACT
+            float result = calculator.Add(a, b);
+
+            // ASSERT
+            Assert.True(float.IsInfinity(result), "Resultatet av två MaxValue bör bli oändlighet (Infinity).");
+
+        }
+
+        [Fact]
+        public void Multiply_ShouldResultInInfinity_WhenMultiplyingLargeNumbers()
+        {
+            // ARRANGE
+            var calculator = new Calculator();
+            float a = 1e38f; // 1 * 10^38.   Ett tal nära float.MaxValue
+            float b = 10.0f; // Multiplicera med ett stort tal
+
+            // ACT
+            float result = calculator.Multiply(a, b);
+
+            // ASSERT
+            Assert.True(float.IsInfinity(result), "Multiplikation av mycket stora tal bör resultera i oändlighet (Infinity)."); 
+        }
+
+
 
 
 
