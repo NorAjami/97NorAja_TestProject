@@ -65,6 +65,7 @@
     <Compile Include="uppgift 2\StringProcessorTests.cs" />
     <Compile Include="uppgift 4\WeatherClient.cs" />
     <Compile Include="uppgift 4\WeatherServiceFacade.cs" />
+    <Compile Include="uppgift 4\WeatherServiceFacadeTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="uppgift 5\" />
