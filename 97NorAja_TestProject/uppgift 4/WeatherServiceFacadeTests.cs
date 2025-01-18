@@ -7,7 +7,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _97NorAja_TestProject
+namespace _97NorAja_TestProject.Uppgift4.Tests
 {
     public class WeatherServiceFacadeTests
     {
@@ -29,6 +29,5 @@ namespace _97NorAja_TestProject
             }
         }
     }
-
 }
 

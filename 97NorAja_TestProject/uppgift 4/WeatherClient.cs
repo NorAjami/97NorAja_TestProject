@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net.Http; // Behövs för HttpRequestException och HttpClient
 
-namespace _97NorAja_TestProject
+
+namespace _97NorAja_TestProject.Uppgift4
 {
     public class WeatherClient
     {
@@ -14,7 +16,7 @@ namespace _97NorAja_TestProject
         // Konstruktor som tar in en HttpClient (Dependency Injection)
         public WeatherClient(HttpClient httpClient)
         {
-            _httpClient = httpClient;
+            _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
         }
 
         // Metod som hämtar väderdata för en given stad
