@@ -71,9 +71,11 @@
     <Compile Include="uppgift 5\BankAccountTests.cs" />
     <Compile Include="uppgift 6\InventoryManager.cs" />
     <Compile Include="uppgift 6\InventoryManagerTests.cs" />
+    <Compile Include="uppgift 7\BookingServiceFacade.cs" />
+    <Compile Include="uppgift 7\BookingSystem.cs" />
+    <Compile Include="uppgift 7\BookingServiceFacadeTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="uppgift 7\" />
     <Folder Include="uppgift 8\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
