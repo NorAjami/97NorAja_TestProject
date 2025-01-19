@@ -1,4 +1,4 @@
-﻿using _97NorAja_TestProject.uppgift_5;
+﻿using _97NorAja_TestProject.Uppgift5;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
