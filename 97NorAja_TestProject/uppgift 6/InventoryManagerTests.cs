@@ -45,7 +45,7 @@ namespace _97NorAja_TestProject.Uppgift6
             var manager = new InventoryManager();
 
             // ACT
-            manager.AddItem("Orange", 0); // Förväntar att ett undantag kastas
+            manager.AddItem("Orange", -1); // Förväntar att ett undantag kastas
         }
 
         [TestMethod]
