@@ -48,21 +48,7 @@ namespace _97NorAja_TestProject
             Assert.Equal(-57.75f, result);
         }
 
-        //jag kommenterade ut denna då jag inte kunde köra den andra divisionen med float exception.
-        // [Fact]
-        /*
-        public void Divide_ShouldReturnCorrectQuotient_WhenDividingNegativeAndPositiveFloats()
-        {
-            // ARRANGE
-            var calculator = new Calculator();
-            float a = 50f;
-            float b = 2.5f;
-            // ACT
-            float result = calculator.Divide(a, b); // 50 / 2.5 = 20
-            // ASSERT
-            Assert.Equal(20, result);
-        }
-        */
+       
         [Fact]
         public void Add_ShouldReturnCorrectSum_WhenAddingTwoNegativeFloats()
         {

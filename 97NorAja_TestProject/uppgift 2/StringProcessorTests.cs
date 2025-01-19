@@ -1,4 +1,4 @@
-﻿using _97NorAja_TestProject.calculator;
+﻿using _97NorAja_TestProject.Uppgift2;
 using static Xunit.Assert;
 using System;
 using Xunit;

@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace _97NorAja_TestProject.calculator
+namespace _97NorAja_TestProject.Uppgift2
 {
     public class StringProcessor
     {
