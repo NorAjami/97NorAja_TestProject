@@ -67,9 +67,10 @@
     <Compile Include="uppgift 4\WeatherClient.cs" />
     <Compile Include="uppgift 4\WeatherServiceFacade.cs" />
     <Compile Include="uppgift 4\WeatherServiceFacadeTests.cs" />
+    <Compile Include="uppgift 5\BankAccount.cs" />
+    <Compile Include="uppgift 5\BankAccountTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="uppgift 5\" />
     <Folder Include="uppgift 6\" />
     <Folder Include="uppgift 7\" />
     <Folder Include="uppgift 8\" />
