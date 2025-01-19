@@ -13,12 +13,12 @@ namespace _97NorAja_TestProject.Uppgift4
     
     public class WeatherServiceFacade
     {
-        private readonly WeatherClient _weatherClient;
+        private readonly IWeatherClient _weatherClient;
 
-        // Konstruktor som tar in en instans av WeatherClient (Dependency Injection)
-        public WeatherServiceFacade(WeatherClient weatherClient)
+        // Konstruktor som tar in en instans av IWeatherClient (Dependency Injection)
+        public WeatherServiceFacade(IWeatherClient weatherClient)
         {
-            _weatherClient = weatherClient;
+            _weatherClient = weatherClient ?? throw new ArgumentNullException(nameof(weatherClient));
         }
 
         // Metod som hämtar väderinformation för en given stad
@@ -32,7 +32,7 @@ namespace _97NorAja_TestProject.Uppgift4
 
             try
             {
-                // Anropa WeatherClient för att hämta väderdata
+                // Anropa IWeatherClient för att hämta väderdata
                 var weatherData = await _weatherClient.GetCurrentWeatherAsync(city);
 
                 // Returnera en formatterad sträng med väderinformationen

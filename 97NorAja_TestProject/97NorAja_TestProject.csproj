@@ -63,6 +63,7 @@
     <Compile Include="calculator\CalculatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="uppgift 2\StringProcessorTests.cs" />
+    <Compile Include="uppgift 4\IWeatherClient.cs" />
     <Compile Include="uppgift 4\WeatherClient.cs" />
     <Compile Include="uppgift 4\WeatherServiceFacade.cs" />
     <Compile Include="uppgift 4\WeatherServiceFacadeTests.cs" />

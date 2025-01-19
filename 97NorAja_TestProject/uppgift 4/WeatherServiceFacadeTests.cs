@@ -1,10 +1,9 @@
 ﻿using _97NorAja_TestProject.Uppgift4;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NSubstitute; // För att mocka WeatherClient
+using NSubstitute; // För att mocka IWeatherClient
 using NSubstitute.ExceptionExtensions;
 using System.Net.Http;
 using System.Threading.Tasks;
-
 
 namespace _97NorAja_TestProject.Uppgift4
 {
@@ -15,7 +14,7 @@ namespace _97NorAja_TestProject.Uppgift4
         public async Task GetWeather_ShouldReturnCorrectWeatherData_ForValidCity()
         {
             // ARRANGE
-            var mockWeatherClient = Substitute.For<WeatherClient>(new HttpClient());
+            var mockWeatherClient = Substitute.For<IWeatherClient>();
             mockWeatherClient.GetCurrentWeatherAsync("Stockholm").Returns(Task.FromResult("Sunny 25°C"));
 
             var facade = new WeatherServiceFacade(mockWeatherClient);
@@ -31,7 +30,7 @@ namespace _97NorAja_TestProject.Uppgift4
         public async Task GetWeather_ShouldReturnErrorMessage_WhenCityIsNull()
         {
             // ARRANGE
-            var mockWeatherClient = Substitute.For<WeatherClient>(new HttpClient());
+            var mockWeatherClient = Substitute.For<IWeatherClient>();
             var facade = new WeatherServiceFacade(mockWeatherClient);
 
             // ACT
@@ -45,7 +44,7 @@ namespace _97NorAja_TestProject.Uppgift4
         public async Task GetWeather_ShouldReturnErrorMessage_WhenHttpRequestFails()
         {
             // ARRANGE
-            var mockWeatherClient = Substitute.For<WeatherClient>(new HttpClient());
+            var mockWeatherClient = Substitute.For<IWeatherClient>();
             mockWeatherClient.GetCurrentWeatherAsync("Gothenburg")
                              .Throws(new HttpRequestException("Network error"));
 
@@ -62,7 +61,7 @@ namespace _97NorAja_TestProject.Uppgift4
         public async Task GetWeather_ShouldHandleLongCityNames()
         {
             // ARRANGE
-            var mockWeatherClient = Substitute.For<WeatherClient>(new HttpClient());
+            var mockWeatherClient = Substitute.For<IWeatherClient>();
             var longCityName = new string('a', 500); // 500 tecken lång stad
             mockWeatherClient.GetCurrentWeatherAsync(longCityName).Returns(Task.FromResult("Cloudy 10°C"));
 

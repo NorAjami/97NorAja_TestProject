@@ -8,9 +8,8 @@ using System.Net.Http; // Behövs för HttpRequestException och HttpClient
 
 namespace _97NorAja_TestProject.Uppgift4
 {
-    public class WeatherClient
+    public class WeatherClient : IWeatherClient
     {
-        
         private readonly HttpClient _httpClient;
 
         // Konstruktor som tar in en HttpClient (Dependency Injection)
@@ -29,9 +28,9 @@ namespace _97NorAja_TestProject.Uppgift4
             {
                 // Simulerar ett API-anrop för att hämta väderdata
                 var response = await _httpClient.GetAsync($"https://api.weather.com/current?city={city}");
-            
+
                 response.EnsureSuccessStatusCode(); // Kasta undantag om statuskoden inte är 2xx
-            
+
                 var weatherData = await response.Content.ReadAsStringAsync();
                 return weatherData;
             }
