@@ -69,9 +69,10 @@
     <Compile Include="uppgift 4\WeatherServiceFacadeTests.cs" />
     <Compile Include="uppgift 5\BankAccount.cs" />
     <Compile Include="uppgift 5\BankAccountTests.cs" />
+    <Compile Include="uppgift 6\InventoryManager.cs" />
+    <Compile Include="uppgift 6\InventoryManagerTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="uppgift 6\" />
     <Folder Include="uppgift 7\" />
     <Folder Include="uppgift 8\" />
   </ItemGroup>
